@@ -2,6 +2,7 @@
   "name": "covid-19-tracker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yossansr.github.io/covid-19-tracker",
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@testing-library/jest-dom": "^4.2.4",
@@ -22,6 +23,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,6 +51,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^2.5.1"
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^2.2.0"
   }
 }
