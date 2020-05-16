@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable no-shadow */
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-function App() {
+import styles from './App.module.css';
+import { Cards, Chart, CountryPicker } from './components';
+import { getCases } from './redux/covid/covidActions';
+import image from './images/image.png';
+
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchAPI = async () => {
+      await dispatch(getCases());
+    };
+    fetchAPI();
+  });
+
+  const handleCountryChange = async (country) => {
+    dispatch(getCases(country));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <img className={styles.image} src={image} alt='COVID-19' />
+      <Cards />
+      <CountryPicker handleCountryChange={handleCountryChange} />
+      <Chart />
     </div>
   );
-}
+};
 
 export default App;
