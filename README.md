@@ -1,2 +1,7 @@
 ### Covid 19 Tracker
-This app by inspired Javascript Mastery Youtube channel, but I implement different method. I create this app using Redux and simplified the component and avoid repeatable part in Card component. I also using middleware to fetch api and put it in the redux store.
+This app implement:
+1. Redux to avoid props driling
+2. Redux-Thunk async actions
+3. React Hooks (class comp ability in functional comp)
+
+This app insipired by Javascript Mastery, but I create the app with the diffetent method.
