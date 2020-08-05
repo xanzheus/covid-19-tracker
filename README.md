@@ -1,5 +1,6 @@
 # Covid 19 Tracker
-An app that give you infected, recocered, deaths data of Covid19 with beautiful chart
+An app that give you infected, recocered, deaths data of Covid19 with beautiful chart.
+
 You can try it at https://yossansr.github.io/covid-19-tracker/
 
 This app implement:
